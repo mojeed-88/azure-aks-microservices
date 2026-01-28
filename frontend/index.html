@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AKS Microservices App</title>
+</head>
+<body>
+  <h1>Azure AKS Microservices Project</h1>
+  <button onclick="loadMessage()">Get Message</button>
+  <p id="output"></p>
+
+  <script>
+    async function loadMessage() {
+      const res = await fetch("http://localhost:3000/api/message");
+      const data = await res.json();
+      document.getElementById("output").innerText = data.message || data.error;
+    }
+  </script>
+</body>
+</html>
