@@ -86,7 +86,7 @@ Browser image
 azure-aks-microservices/
 │
 ├── frontend/ # Frontend application source code
-├── backend/ # Backend (Node.js API) source code
+├── backend/ # Backend (Python API) 
 ├── database/ # Database configuration files
 │
 ├── terraform/ # Infrastructure as Code (AKS, ACR, networking)
