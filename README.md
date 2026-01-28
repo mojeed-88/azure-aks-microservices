@@ -10,26 +10,6 @@ The application consists of:
 
 ---
 
-## Repository Structure
-
-```                    
-azure-aks-microservices/
-│
-├── frontend/ # Frontend application source code
-├── backend/ # Backend (Node.js API) source code
-├── database/ # Database configuration files
-│
-├── terraform/ # Infrastructure as Code (AKS, ACR, networking)
-├── k8s-manifests/ # Kubernetes deployment & service manifests
-│
-├── docs/ # Project screenshots and evidence
-│
-├── README.md
-└── .gitignore
-
-
----
-
 ## Architecture Overview
 
 - Azure Kubernetes Service (**AKS**) deployed in **Canada Central**
@@ -100,13 +80,31 @@ Browser image
 - Cloud Networking & Load Balancing
 
 
-## Author
+## Repository Structure
 
-**Mojeed Tijani**  
+ ```                   
+azure-aks-microservices/
+│
+├── frontend/ # Frontend application source code
+├── backend/ # Backend (Node.js API) source code
+├── database/ # Database configuration files
+│
+├── terraform/ # Infrastructure as Code (AKS, ACR, networking)
+├── k8s-manifests/ # Kubernetes deployment & service manifests
+│
+├── docs/ # Project screenshots and evidence
+│
+├── README.md
+└── .gitignore
+
+
+Author
+
+Mojeed Tijani 
 Azure Cloud Engineer  
 
-### Certifications
-- AZ-104 – Microsoft Azure Administrator  
-- KCNA – Kubernetes and Cloud Native Associate  
-- FinOps Certified Engineer
+Certifications
+• AZ-104 – Microsoft Azure Administrator  
+• KCNA – Kubernetes and Cloud Native Associate  
+• FinOps Certified Engineer
 
