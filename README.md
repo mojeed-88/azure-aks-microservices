@@ -12,7 +12,8 @@ The application consists of:
 
 ## Repository Structure
 
-azure-aks-microservices/```
+```                     ```
+azure-aks-microservices/
 │
 ├── frontend/ # Frontend application source code
 ├── backend/ # Backend (Node.js API) source code
@@ -100,12 +101,11 @@ Browser image
 
 ## Author
 
-Mojeed Tijani
-Azure Cloud Engineer
+**Mojeed Tijani**  
+Azure Cloud Engineer  
 
-Certifications:
-    AZ-104 – Microsoft Azure Administrator
-    KCNA – Kubernetes and Cloud Native Associate
-    FinOps Certified Engineer
-
+### Certifications
+- AZ-104 – Microsoft Azure Administrator  
+- KCNA – Kubernetes and Cloud Native Associate  
+- FinOps Certified Engineer
 
