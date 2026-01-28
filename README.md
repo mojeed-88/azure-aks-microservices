@@ -9,7 +9,7 @@ This project deploys a microservices application on Azure Kubernetes Service (AK
 
 ## Repository structure
 
-```
+
 azure-aks-microservices/
 ├── frontend/
 ├── backend/
