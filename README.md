@@ -143,6 +143,7 @@ Mojeed Tijani
 Azure Cloud Engineer  
 
 Certifications
+
 • AZ-104 – Microsoft Azure Administrator  
 • KCNA – Kubernetes and Cloud Native Associate  
 • FinOps Certified Engineer
