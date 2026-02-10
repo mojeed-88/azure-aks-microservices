@@ -4,8 +4,8 @@ This project demonstrates deploying a containerized microservices application on
 
 The application consists of:
 
-- **Frontend** – Nginx-based web application  
-- **Backend** – Node.js REST API  
+- **Frontend** – HTML/CSS web application  
+- **Backend** – Python REST API  
 - **Database** – PostgreSQL  
 
 ---
@@ -43,9 +43,12 @@ Images in ACR
 ![containers](docs/azurecr-repository.png)
 
 
+## Provisioned Azure Kubernetes Services (AKS) with Terraform
+
+- terraform plan
 ![image showing terraform-plan](docs/terraform-plan-image.png)
 
-
+- terraform apply
 ![image showing infrasructures provision after terraform apply](docs/resources-in-azure.png)
 
 
@@ -57,10 +60,12 @@ Images in ACR
 - kubectl apply -f k8s/frontend/
 
 
-AKS Nodes and Pods
+## AKS Nodes and Pods After deployment
+
+kubectl get nodes 
 ![containers](docs/kubectl-get-node-screenshot.png)
 
-
+kubectl get pods
 ![Image showing all pos are running after deployment](docs/pods-running-screenshot.png)
 
 
