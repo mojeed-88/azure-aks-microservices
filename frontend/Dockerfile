@@ -1,11 +1,9 @@
 FROM nginx:alpine
 
-# Copy index.html and health.html
-COPY index.html /usr/share/nginx/html/index.html
-COPY health.html /usr/share/nginx/html/health
+RUN rm -rf /usr/share/nginx/html/*
 
-# Expose port 80
+COPY . /usr/share/nginx/html/
+
 EXPOSE 80
 
-# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]

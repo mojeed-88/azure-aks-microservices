@@ -1,37 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: shoe-backend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend
+      app: shoe-backend
   template:
     metadata:
       labels:
-        app: backend
+        app: shoe-backend
     spec:
       containers:
-      - name: backend
-        image: mojeed0088.azurecr.io/backend:v1
-        ports:
-        - containerPort: 3000
-        envFrom:
-        - configMapRef:
-            name: backend-config
-        - secretRef:
-            name: postgres-secret
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 3000
-          initialDelaySeconds: 15
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 5
+        - name: backend
+          image: mojeed0088.azurecr.io/backend:v1
+          imagePullPolicy: Always
 
+          ports:
+            - containerPort: 5000
+
+          envFrom:
+            - secretRef:
+                name: postgres-secret
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 15
+            periodSeconds: 10
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5

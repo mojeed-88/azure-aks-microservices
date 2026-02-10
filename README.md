@@ -28,7 +28,7 @@ The application consists of:
 - docker build -t mojeed0088.azurecr.io/backend:v1 ./backend
 
 Built & containerized images
-   ![containers](docs/container.png)
+   ![image showing built docker images](docs/docker-images.png)
 
 
 ## Push Images to Azure Container Registry
@@ -39,7 +39,14 @@ Built & containerized images
 Images in ACR
 ![containers](docs/repository-image.png)
 
+
 ![containers](docs/azurecr-repository.png)
+
+
+![image showing terraform-plan](docs/terraform-plan-image.png)
+
+
+![image showing infrasructures provision after terraform apply](docs/resources-in-azure.png)
 
 
 ## Deploy to Kubernetes
@@ -60,13 +67,13 @@ AKS Nodes and Pods
 - Database: Internal ClusterIP service
 
 Service IPs
-![containers](docs/IPs-image.png)
+![image showing the external ip address](docs/IPs-address.png)
 
 
 ## Application Access
 
 Browser image
-![containers](docs/browser-image.png)
+![testing the frontend external ip on browser](docs/frontendapp-running-aks.png)
 
 
 ## Key Skills Demonstrated
@@ -82,21 +89,49 @@ Browser image
 
 ## Repository Structure
 
- ```                   
-azure-aks-microservices/
-│
-├── frontend/ # Frontend application source code
-├── backend/ # Backend (Python API) 
-├── database/ # Database configuration files
-│
-├── terraform/ # Infrastructure as Code (AKS, ACR, networking)
-├── k8s-manifests/ # Kubernetes deployment & service manifests
-│
-├── docs/ # Project screenshots and evidence
-│
-├── README.md
-└── .gitignore
-
+    ```
+    azure-aks-microservices
+    ├── README.md
+    ├── backend
+    │   ├── Dockerfile
+    │   ├── app.py
+    │   └── requirements.txt
+    ├── docs
+    │   ├── azurecr-repository.png
+    │   ├── docker-images.png
+    │   ├── frontendapp-running-aks.png
+    │   ├── kubectl-get-node-screenshot.png
+    │   ├── pods-running-screenshot.png
+    │   ├── repository-image.png
+    │   ├── resources-in-azure.png
+    │   └── terraform-plan-image.png
+    ├── frontend
+    │   ├── Dockerfile
+    │   ├── health.html
+    │   └── index.html
+    ├── k8s
+    │   ├── backend
+    │   │   ├── backend-deployment.yaml
+    │   │   └── backend-service.yaml
+    │   ├── database
+    │   │   ├── postgres-deployment.yaml
+    │   │   ├── postgres-pvc.yaml
+    │   │   ├── postgres-secret.example.yaml
+    │   │   ├── postgres-secret.yaml
+    │   │   └── postgres-service.yaml
+    │   ├── frontend
+    │   │   ├── deployment.yaml
+    │   │   └── service.yaml
+    │   └── namespaces.yaml
+    └── terraform
+        ├── acr.tf
+        ├── main.tf
+        ├── outputs.tf
+        ├── provider.tf
+        ├── terraform.tfstate
+        ├── terraform.tfstate.backup
+        ├── terraform.tfvars
+        └── variables.tf
 
 Author
 

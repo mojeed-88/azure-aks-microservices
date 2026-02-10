@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend
+  name: shoe-backend
 spec:
-  type: ClusterIP
   selector:
-    app: backend
+    app: shoe-backend
   ports:
-  - port: 3000
-    targetPort: 3000
-
+  - port: 5000
+    targetPort: 5000
+  type: ClusterIP

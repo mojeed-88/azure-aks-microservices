@@ -49,3 +49,4 @@ variable "vm_size" {
   type    = string
   default = "standard_a2_v2"
 }
+
