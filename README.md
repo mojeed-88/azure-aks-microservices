@@ -52,12 +52,16 @@ Images in ACR
 ## Deploy to Kubernetes
 
 - Apply the Kubernetes manifests in order:
-- kubectl apply -f k8s-manifests/database
-- kubectl apply -f k8s-manifests/backend
-- kubectl apply -f k8s-manifests/frontend
+- kubectl apply -f k8s/database/
+- kubectl apply -f k8s/backend/
+- kubectl apply -f k8s/frontend/
+
 
 AKS Nodes and Pods
 ![containers](docs/kubectl-get-node-screenshot.png)
+
+
+![Image showing all pos are running after deployment](docs/pods-running-screenshot.png)
 
 
 ## Service Access
