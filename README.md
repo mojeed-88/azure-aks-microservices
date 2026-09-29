@@ -67,7 +67,10 @@ The application consists of three components:
 - Docker images are stored in **Azure Container Registry**.
 - Azure infrastructure is provisioned using **Terraform**.
 
+---
+
 ## Technology Stack
+
 **Area**                           	**Technology**
 Cloud Platform                     	Microsoft Azure
 Container Orchestration	            Azure Kubernetes Service (AKS)
@@ -78,6 +81,17 @@ Frontend                           	HTML / CSS
 Backend                           	Python REST API
 Database                           	PostgreSQL
 Networking	                        Kubernetes Services / Azure Load Balancer
+
+| Area                      | Technology                                |
+| ------------------------- | ----------------------------------------- |
+| Cloud Platform            | Microsoft Azure                           |
+| Container Ochestration    | Azure Kubernetes Service (AKS)            |
+| Containerization          | Docker                                    |
+| Container Registry        | Azure Container Registry (ACR)            |
+| Infrastructure as Code    | Terraform                                 |
+| Frontend                  | HTML / CSS                                |              | Backend                   | Python REST API                           |
+| Database                  | PostgreSQL                                |
+| Networking                | Kubernetes Services / Azure Load Balancer |
 
 ---
 
@@ -286,10 +300,12 @@ kubectl get deployments
 
 The application uses the following Kubernetes service model:
 
-**Component	      Service Type	   Accessibility**
-Frontend         	LoadBalancer	   External
-Backend	         ClusterIP   	   Internal
-PostgreSQL	      ClusterIP	      Internal
+| Component       | Service Type  | Accessibility   |
+| --------------- | ------------- | --------------- |
+| Frontend        | LoadBalancer  | External        |
+| Backend	        | ClusterIP     | Internal        |
+| PostgreSQL      | ClusterIP     | Internal        |
+
 
 Check the assigned service addresses:
 
